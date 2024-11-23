@@ -35,6 +35,7 @@ const handleLookup = async () => {
         const data = await res.json();
         if (!data[0].PostOffice || data[0].PostOffice.length === 0) {
             alert("Couldn’t find the postal data you’re looking for");
+            preloader.style.display = "none";
             return;
         }
         postOfficedata = [...data[0].PostOffice];
