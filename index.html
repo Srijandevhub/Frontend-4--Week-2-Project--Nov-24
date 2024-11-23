@@ -5,12 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend 4 || Week 2 Project || Nov 24</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto&display=swap');
     </style>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    
+    <div id="preloader">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <div id="pincode-input">
+        <div class="container">
+            <label class="fs-1">Enter Pincode</label>
+            <input type="text" class="form-control" placeholder="Pincode" id="pincode" maxlength="6"/>
+            <button class="btn-dark" id="lookupBtn">Lookup</button>
+        </div>
+    </div>
+    <div id="pincode-details">
+        <div class="container">
+            <h1 class="fs-1">Pincode: <span id="pincode-content">110048</span></h1>
+            <p class="para"><strong>Message: </strong><span id="message-content"></span></p>
+            <div class="form-group">
+                <i class="form-icon">
+                    <img src="assets/images/search.png" alt="search"/>
+                </i>
+                <input type="text" class="form-control" placeholder="Filter" id="filter"/>
+            </div>
+            <div id="details-row">
+                
+            </div>
+        </div>
+    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
